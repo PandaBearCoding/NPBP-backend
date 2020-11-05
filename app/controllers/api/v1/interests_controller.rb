@@ -7,6 +7,7 @@ class Api::V1::InterestsController < ApplicationController
     end 
 
     def show 
+        render json: interest, except: [:created_at, :updated_at]
     end 
 
     private

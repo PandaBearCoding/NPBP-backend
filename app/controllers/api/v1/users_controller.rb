@@ -1,7 +1,12 @@
 class Api::V1::UsersController < ApplicationController
-    before_action :find_user, only: [:show, :edit, :update, :destroy]
+    # before_action :find_user, only: [:show, :update, :destroy]
     # skip_before_action :authorized, only: [:new, :create, :login, :handle_login, :homepage]
     
+    def index
+        users = User.all
+        render json: users
+    end
+
     def show
         render json: user, except: [:created_at, :updated_at]
     end
@@ -38,7 +43,6 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:username, :password_digest, :name, :location, :profile_pic)
+        params.require(:user).permit(:username, :name, :location, :profile_pic)
     end
-
 end

@@ -3,7 +3,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def index
         items = Item.all
-        render json: items, except: [:created_at, :updated_at, :interest_id]
+        render json: items
     end 
 
     def show 
