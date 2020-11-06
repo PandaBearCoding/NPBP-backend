@@ -19,6 +19,7 @@ interest2 = Interest.create(category: "Travel", avatar: "https://www.ksat.com/re
 interest3 = Interest.create(category: "Green Sustainability", avatar: "https://en.nhandan.com.vn/cdn/en/media/k2/items/src/727/06b6741b1354675dc998415c94fb0e60.jpg")
 interest4 = Interest.create(category: "True Crime", avatar: "https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555288890/shape/mentalfloss/istock-495760198.jpg")
 interest5 = Interest.create(category: "Sports", avatar: "https://sport.one/content/images/2018/01/2222-18.jpg")
+interest6 = Interest.create(category: "Tech", avatar: "https://inteng-storage.s3.amazonaws.com/img/iea/nR6bkXZxwo/sizes/software-engineering-skills_md.jpg")
 
 # Architecture & Design
 item1 = Item.create(interest_id: interest1.id, title: "Gothic", description: "Gothic architecture is a European style of architecture that values height and exhibits an intricate and delicate aesthetic. Though its roots are French, the Gothic approach can be found in churches, cathedrals, and other similar buildings in Europe and beyond (source: https://mymodernmet.com/gothic-architecture-characteristics/).", card_image: "https://mymodernmet.com/wp/wp-content/uploads/2017/11/gothic-architecture-characteristics-1.jpg")
@@ -40,9 +41,15 @@ item12 = Item.create(interest_id: interest4.id, title: "Zodiac Killer", descript
 item13 = Item.create(interest_id: interest5.id, title: "Football", description: "Antonio Brown is back in the NFL and set to make his return in Week 9 as part of the Tampa Bay Buccaneers.", card_image: "https://cdn.vox-cdn.com/thumbor/ZFT6wXMJMKJLxhri-2oHhNHEAHA=/0x0:4858x3239/1200x800/filters:focal(2229x572:3005x1348)/cdn.vox-cdn.com/uploads/chorus_image/image/67739125/201104_KZ_Practice_0014.0.jpg")
 item14 = Item.create(interest_id: interest5.id, title: "Hockey", description: "Ahead of the start of Day Two of the NHL Draft, the Pittsburgh Penguins traded two-time Stanely Cup champion, Matthew Murray, to the Ottawa Senators for forward prospect Jonathan Gruden and a 2020 second-round pick. This trade that will ultimately give Pittsburgh more cap relief for next season.", card_image: "https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fsenshot.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F1186220066-850x560.jpeg")
 item15 = Item.create(interest_id: interest5.id, title: "Skiing", description: "How will the corona virus change the 2020-2021 ski season? The car becomes the lodge, due to reduced indoor capacities; grab-and-go will be encouraged for dining; and expect longer lift lines as less people are allowed on the gondola/chair at one time. Being flexible is key - be grateful you're healthy enough to ski!", card_image: "https://www.iii.org/insuranceindustryblog/wp-content/uploads/2019/01/iStock-999962446.jpg")
+# Tech
+item16 = Item.create(interest_id: interest6.id, title: "JavaScript", description: "Vanilla JavaScript was the death of me; but my ghost is a lot smarter.", card_image: "https://static.frontendmasters.com/assets/courses/2019-04-05-js-recent-parts/thumb@2x.jpg")
+item17 = Item.create(interest_id: interest6.id, title: "React", description: "The BEST framework, duh!", card_image: "https://reactjs.org/logo-og.png")
+item18 = Item.create(interest_id: interest6.id, title: "Rails", description: "The back end can be a scary place.", card_image: "https://cdn.sanity.io/images/ay6gmb6r/production/bb652b4b35320ed08b3ed63eeea9f97446776296-2240x1260.png")
 
 favorite1 = Favorite.create(user_id: user1.id, interest_id: interest1.id)
 favorite2 = Favorite.create(user_id: user2.id, interest_id: interest2.id)
 favorite3 = Favorite.create(user_id: user3.id, interest_id: interest3.id)
 favorite4 = Favorite.create(user_id: user1.id, interest_id: interest4.id)
 favorite5 = Favorite.create(user_id: user2.id, interest_id: interest5.id)
+favorite3 = Favorite.create(user_id: user3.id, interest_id: interest6.id)
+
