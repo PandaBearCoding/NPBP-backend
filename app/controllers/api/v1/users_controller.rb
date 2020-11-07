@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
     # skip_before_action :authorized, only: [:new, :create, :login, :handle_login, :homepage]
     
     def index
-        users = User.all
+        users = User.all.sort_by {|user| user.name}
         render json: users
     end
 
@@ -19,7 +19,10 @@ class Api::V1::UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        user.update(user_params)
+
+        user.update!(user_params)
+
+        render json: user
     end
 
     def destroy
