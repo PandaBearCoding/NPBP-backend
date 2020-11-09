@@ -47,9 +47,9 @@ item17 = Item.create(interest_id: interest6.id, title: "React", description: "Th
 item18 = Item.create(interest_id: interest6.id, title: "Rails", description: "The back end can be a scary place.", card_image: "https://cdn.sanity.io/images/ay6gmb6r/production/bb652b4b35320ed08b3ed63eeea9f97446776296-2240x1260.png")
 
 favorite1 = Favorite.create(user_id: user1.id, interest_id: interest1.id)
-favorite2 = Favorite.create(user_id: user2.id, interest_id: interest2.id)
-favorite3 = Favorite.create(user_id: user3.id, interest_id: interest3.id)
+favorite2 = Favorite.create(user_id: user1.id, interest_id: interest2.id)
+favorite3 = Favorite.create(user_id: user1.id, interest_id: interest3.id)
 favorite4 = Favorite.create(user_id: user1.id, interest_id: interest4.id)
-favorite5 = Favorite.create(user_id: user2.id, interest_id: interest5.id)
-favorite3 = Favorite.create(user_id: user3.id, interest_id: interest6.id)
+favorite5 = Favorite.create(user_id: user1.id, interest_id: interest5.id)
+favorite3 = Favorite.create(user_id: user1.id, interest_id: interest6.id)
 

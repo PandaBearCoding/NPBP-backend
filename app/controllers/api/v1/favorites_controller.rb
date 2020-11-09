@@ -2,8 +2,8 @@ class Api::V1::FavoritesController < ApplicationController
     before_action :find_favorite, only: [:show, :update, :destroy]
 
     def index
-        favorites = Favorite.all.sort_by {|favorite| favorite.interest_id}
-        render json: favorites, except: [:created_at, :updated_at, :user_id, :interest_id]     
+        favorites = Favorite.all.sort_by {|favorite| favorite.user_id}
+        render json: favorites, except: [:created_at, :updated_at]     
     end
 
     def update
@@ -12,7 +12,7 @@ class Api::V1::FavoritesController < ApplicationController
     end 
 
     def create
-        favorite = Favorite.create!(favorite_params)
+        favorite = @user.favorites.create!(favorite_params)
         render json: favorite
     end
 
