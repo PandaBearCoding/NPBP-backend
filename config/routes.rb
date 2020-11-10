@@ -22,20 +22,6 @@ Rails.application.routes.draw do
       resources :items
     end
   end 
-
-  # log in 
-  namespace :api do
-    namespace :v1 do
-      resources :login
-    end
-  end
-
-  # log out 
-  namespace :api do
-    namespace :v1 do
-      delete :logout
-    end
-  end 
     
 end
 
