@@ -18,8 +18,8 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def update
-        user = User.find(params[:id])
-        user.update(user_params)
+        @user = User.find(params[:id])
+        @ser.update(user_params)
     end
 
     def destroy
@@ -33,6 +33,13 @@ class Api::V1::UsersController < ApplicationController
 
     def login
     end
+
+    def favorites 
+        # grab user, grab favorites and return user's favorites
+        @user = User.find(params[:id])
+        favorites = @user.favorites
+        render json: favorites
+    end 
 
     def logout
         session[:user] = nil
