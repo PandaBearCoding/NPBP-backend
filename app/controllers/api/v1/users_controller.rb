@@ -34,16 +34,10 @@ class Api::V1::UsersController < ApplicationController
 
     def favorites 
         # grab user, grab favorites and return user's favorites
-        @user = User.find(params[:id])
-        favorites = @user.favorites
+        user = User.find(params[:id])
+        favorites = user.favorites
         render json: favorites
     end 
-
-    def logout
-        session[:user] = nil
-        flash[:message] = "You have successfully logged out"
-        redirect_to login_path
-    end
 
     private
     # def find_user
@@ -51,6 +45,6 @@ class Api::V1::UsersController < ApplicationController
     # end
 
     def user_params
-        params.require(:user).permit(:username, :name, :location, :profile_pic)
+        params.require(:user).permit(:username, :name, :location, :profile_pic, :favorites)
     end
 end

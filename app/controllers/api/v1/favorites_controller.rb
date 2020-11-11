@@ -1,14 +1,20 @@
 class Api::V1::FavoritesController < ApplicationController
-    before_action :find_favorite, only: [:show, :update, :destroy]
+    # before_action :find_favorite, only: [:show, :update, :destroy]
 
     def index
         favorites = Favorite.all.sort_by {|favorite| favorite.interest_id}
         render json: favorites, except: [:created_at, :updated_at, :user_id, :interest_id]     
     end
 
+    def show
+        favorite = Favorite.find(params[:id])
+        render json: favorite
+    end
+
     def update
+        favorite = Favorite.find(params[:id])
         favorite.update!(favorite_params)
-        render json:{}
+        render json: {}
     end 
 
     def create
@@ -17,14 +23,15 @@ class Api::V1::FavoritesController < ApplicationController
     end
 
     def destroy
+        favorite = Favorite.find(params[:id])
         favorite.destroy
         render json: {}
     end 
 
     private
-    def find_favorite
-        favorite = Favorite.find(params[:id])
-    end
+    # def find_favorite
+    #     favorite = Favorite.find(params[:id])
+    # end
     
     def favorite_params
         params.require(:favorite).permit(:user_id, :interest_id)

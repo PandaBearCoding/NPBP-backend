@@ -1,5 +1,5 @@
 class FavoriteSerializer < ActiveModel::Serializer
   attributes :id, :user_id, :interest_id
-  belongs_to :user
-  belongs_to :interest
+  has_one :user
+  # has_one :interest
 end

@@ -11,8 +11,8 @@ Item.destroy_all
 Favorite.destroy_all
 
 user1 = User.create(username: "mrs161", name: "Madeline Stalter", location: "Brooklyn, New York", profile_pic: "https://lh3.googleusercontent.com/proxy/d4NagMGHOQ3arQR6elqtzaEJl4LMdbaz9wRF8NSnA2RehMyR3nZRLTgeZdF-Z4Kia58dINRlfhRgAbq2AsheCjA32FZmdfKjLpaH1IcA0HcOJ6GYC2GUzxsh8JW99JL42CSL44Ru1M3JObw71h55S-lk4xiETH-IiIek")
-user2 = User.create(username: "jg71", name: "Johnnie Gonzalez", location: "Elizabeth, New Jersey", profile_pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/DOG-HUSKY_23JUL00.jpg/220px-DOG-HUSKY_23JUL00.jpg")
-user3 = User.create(username: "eaf40", name: "Erik Frost", location: "Brooklyn, New York", profile_pic: "https://lmegj1zls2x46spge37mwjqd-wpengine.netdna-ssl.com/wp-content/uploads/image4-1.png")
+# user2 = User.create(username: "jg71", name: "Johnnie Gonzalez", location: "Elizabeth, New Jersey", profile_pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/DOG-HUSKY_23JUL00.jpg/220px-DOG-HUSKY_23JUL00.jpg")
+# user3 = User.create(username: "eaf40", name: "Erik Frost", location: "Brooklyn, New York", profile_pic: "https://lmegj1zls2x46spge37mwjqd-wpengine.netdna-ssl.com/wp-content/uploads/image4-1.png")
 
 interest1 = Interest.create(category: "Architecture & Design", avatar: "https://cdn.rit.edu/images/news/2018-12/architecture.jpg")
 interest2 = Interest.create(category: "Travel", avatar: "https://www.ksat.com/resizer/i3ZhVJv2ykedu5JQdNjmADieJvo=/1280x1024/smart/filters:format(jpeg):strip_exif(true):strip_icc(true):no_upscale(true):quality(65)/cloudfront-us-east-1.images.arcpublishing.com/gmg/GALRBVCXFBGV3FVVUFXOMOZCDA.jpg")
@@ -47,9 +47,9 @@ item17 = Item.create(interest_id: interest6.id, title: "React", description: "Th
 item18 = Item.create(interest_id: interest6.id, title: "Rails", description: "The back end can be a scary place.", card_image: "https://cdn.sanity.io/images/ay6gmb6r/production/bb652b4b35320ed08b3ed63eeea9f97446776296-2240x1260.png")
 
 favorite1 = Favorite.create(user_id: user1.id, interest_id: interest1.id)
-favorite2 = Favorite.create(user_id: user2.id, interest_id: interest2.id)
-favorite3 = Favorite.create(user_id: user3.id, interest_id: interest3.id)
-favorite4 = Favorite.create(user_id: user1.id, interest_id: interest4.id)
-favorite5 = Favorite.create(user_id: user2.id, interest_id: interest5.id)
-favorite3 = Favorite.create(user_id: user3.id, interest_id: interest6.id)
+# favorite2 = Favorite.create(user_id: user1.id, interest_id: interest2.id)
+# favorite3 = Favorite.create(user_id: user1.id, interest_id: interest3.id)
+# favorite4 = Favorite.create(user_id: user1.id, interest_id: interest4.id)
+# favorite5 = Favorite.create(user_id: user1.id, interest_id: interest5.id)
+# favorite3 = Favorite.create(user_id: user1.id, interest_id: interest6.id)
 
